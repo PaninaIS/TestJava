@@ -1,6 +1,6 @@
 package primer;
 
-public class Animals {
+abstract class Animals {
     String name;
     int age;
 

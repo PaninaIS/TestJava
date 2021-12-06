@@ -1,6 +1,8 @@
 package primer;
 
-public class Cat extends Animals implements Makingsounds{
+import primer.interfc.AnimalMakingSounds;
+
+public class Cat extends Animals implements AnimalMakingSounds {
 
     private Human human;
 
@@ -38,13 +40,13 @@ public class Cat extends Animals implements Makingsounds{
         super(name,age);
     }
 
-    private Cat() {
+    public Cat() {
     }
 
 
     @Override
     public void sounds() {
-        System.out.println("Кошка мяукает");
+        System.out.println("Кот мяукает");
     }
 
     //кто управляет котом
@@ -57,21 +59,5 @@ public class Cat extends Animals implements Makingsounds{
         this.human = human;
     }
 
-    public static void main(String[] args) {
-        Cat cat1 = new Cat("Бегемот", 5);
-        System.out.println("Кот " + cat1.getName() + " возраст:" + cat1.getAge());
-        Cat cat2 = new Cat();
-        System.out.println(cat2.getName());
-        Cat nemo1 = new Cat("Nemo", 1);
-        Cat nemo = new Cat("Nemo", 1);
-        System.out.println(nemo == nemo1);//сравнение ссылок
-        System.out.println(nemo.equals(nemo1));// метод сравнения объектов
 
-        System.out.println("Изначальное имя кота — " + nemo.getName());
-        nemo.setName("Василий");
-        System.out.println("Новое имя кота — " + nemo.getName());
-
-        nemo1.sounds();
-        System.out.println(nemo1.hashCode());
-    }
 }

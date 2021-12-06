@@ -1,6 +1,8 @@
 package primer;
 
-public class Dog extends Animals implements Makingsounds {
+import primer.interfc.AnimalMakingSounds;
+
+public class Dog extends Animals implements AnimalMakingSounds {
     @Override
     public String toString() {
         return "Dog{"
@@ -40,14 +42,5 @@ public class Dog extends Animals implements Makingsounds {
      @Override
     public void sounds() {
         System.out.println("Собака лает");
-    }
-
-    public static void main(String[] args) {
-        Dog dog1 = new Dog("Рекс", 7);
-        System.out.println(dog1.getName());
-        Dog dog2 = new Dog("Мухтар", 3);
-        System.out.println(dog2.getName());
-        dog1.sounds();
-        System.out.println(dog1.hashCode());
     }
 }
