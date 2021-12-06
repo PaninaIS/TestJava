@@ -1,4 +1,4 @@
-package primer.interfc;
+package primer.interfaces;
 
 public interface AnimalMakingSounds {
     public void sounds();

@@ -1,6 +1,7 @@
-package primer;
+package primer.pojo;
 
-import primer.interfc.AnimalMakingSounds;
+import primer.interfaces.AnimalMakingSounds;
+import primer.interfaces.impl.Animals;
 
 public class Cat extends Animals implements AnimalMakingSounds {
 

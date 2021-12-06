@@ -1,4 +1,6 @@
-package primer;
+package primer.pojo;
+
+import primer.pojo.Cat;
 
 public class Human {
     private String name;

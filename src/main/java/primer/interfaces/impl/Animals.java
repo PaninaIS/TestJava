@@ -1,8 +1,8 @@
-package primer;
+package primer.interfaces.impl;
 
-abstract class Animals {
-    String name;
-    int age;
+public abstract class Animals {
+    public String name;
+    public int age;
 
     public Animals(String name, int age) {
     this.name=name;

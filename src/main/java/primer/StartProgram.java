@@ -1,10 +1,10 @@
-package starting;
+package primer;
 
-import primer.Cat;
-import primer.Dog;
-import primer.Human;
+import primer.pojo.Cat;
+import primer.pojo.Dog;
+import primer.pojo.Human;
 
-public class StartClass {
+public class StartProgram {
     public static void main(String[] args) {
         Human vitalii = new Human("Виталий", 35, "муж");
 

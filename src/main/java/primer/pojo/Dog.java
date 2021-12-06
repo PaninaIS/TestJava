@@ -1,6 +1,8 @@
-package primer;
+package primer.pojo;
 
-import primer.interfc.AnimalMakingSounds;
+import primer.interfaces.AnimalMakingSounds;
+import primer.interfaces.impl.Animals;
+import primer.pojo.Cat;
 
 public class Dog extends Animals implements AnimalMakingSounds {
     @Override
