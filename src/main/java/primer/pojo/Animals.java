@@ -1,8 +1,8 @@
-package primer.interfaces.impl;
+package primer.pojo;
 
 public abstract class Animals {
-    public String name;
-    public int age;
+    private String name;
+    private int age;
 
     public Animals(String name, int age) {
     this.name=name;
@@ -23,7 +23,11 @@ public abstract class Animals {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0 & age < 25) {
+            this.age = age;
+        } else {
+            System.out.println("Ошибка!");
+        }
     }
 
 }

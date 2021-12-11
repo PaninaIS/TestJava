@@ -1,12 +1,10 @@
 package primer.pojo;
 
-import primer.pojo.Cat;
-
 public class Human {
     private String name;
     private int age;
     private String gender;
-    private Cat cat;
+
 
     @Override
     public String toString() {
@@ -39,7 +37,11 @@ public class Human {
         return this.age;
     }
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0 ) {
+            this.age = age;
+        } else {
+            System.out.println("Ошибка!");
+        }
     }
 
 }

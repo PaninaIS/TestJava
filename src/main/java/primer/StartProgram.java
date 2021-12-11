@@ -35,25 +35,24 @@ public class StartProgram {
                 " есть кот " + nemo.getName() + " и собака " + muhtar.getName());
 
         Cat catNotName1 = new Cat();
-        System.out.println("В клинику попал уличный кот "+catNotName1.getName());
+       // System.out.println("В клинику попал уличный кот "+catNotName1.getName());
 
         System.out.println("Изначальное имя человека — " + vitalii.getName());
         vitalii.setName("Ветал");
         System.out.println("Новое имя человека — " + vitalii.getName());
-
-        Cat nemo1 = new Cat("Nemo", 1);
-        System.out.println(nemo == nemo1);//сравнение ссылок
-        System.out.println(nemo.equals(nemo1));// метод сравнения объектов
 
         System.out.println("Изначальное имя кота — " + nemo.getName());
         nemo.setName("Василий");
         nemo.setAge(2);
         System.out.println("Новое имя кота — " + nemo.getName()+", возраст- "+nemo.getAge());
 
-        nemo1.sounds();
-        System.out.println(nemo1.hashCode());
-
+        begemot.sounds();
         muhtar.sounds();
 
+        Cat nemo1 = new Cat("Nemo", 1);
+        // System.out.println(nemo == nemo1);//сравнение ссылок
+        // System.out.println(nemo.equals(nemo1));// метод сравнения объектов
+        // System.out.println("хэш код Немо-"+nemo.hashCode());
+        // System.out.println("хэш код Немо1-"+nemo1.hashCode());
     }
 }
