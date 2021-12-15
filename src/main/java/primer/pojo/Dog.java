@@ -4,19 +4,28 @@ import primer.interfaces.AnimalMakingSounds;
 
 public class Dog extends Animals implements AnimalMakingSounds {
 
-    @Override
-    public String toString() {
-        return "Dog{"
-                + "Имя='" + getName() + '\''
-                + ", возраст=" + getAge()
-                + '}';
-    }
+   private Human human;
 
     public Dog(String name, int age) {
         super(name,age);
     }
 
     private Dog() {
+    }
+
+    public Human getHuman() {
+        return human;
+    }
+
+    public void setHuman (Human human) {
+        this.human = human;
+    }
+
+        public String toString() {
+        return "Dog{"
+                + "Имя='" + super.getName() + '\''
+                + ", возраст=" + super.getAge()
+                + '}';
     }
 
      @Override

@@ -4,18 +4,11 @@ public class Human {
     private String name;
     private int age;
     private String gender;
+    private Cat cat;
+    private Dog dog;
 
 
-    @Override
-    public String toString() {
-        return "Human{"
-                + "Имя='" + name + '\''
-                + ", возраст=" + age
-                + ", пол=" + gender
-                + '}';
-    }
-
-    public Human(String name, int age, String gender) {
+       public Human(String name, int age, String gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -43,5 +36,30 @@ public class Human {
             System.out.println("Ошибка!");
         }
     }
+    //узнать каким котом владеет котом
+    public Cat getCat(){
+           return cat;
+    }
 
+    //человеку присвоить кота
+    public void setCat(Cat cat) {
+        this.cat = cat;
+    }
+
+    public Dog getDog(){
+        return dog;
+    }
+
+     public void setDog(Dog dog) {
+        this.dog = dog;
+    }
+
+    @Override
+    public String toString() {
+        return "Human{"
+                + "Имя='" + name + '\''
+                + ", возраст=" + age
+                + ", пол=" + gender
+                + '}';
+    }
 }

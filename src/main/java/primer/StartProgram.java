@@ -16,9 +16,13 @@ public class StartProgram {
         System.out.println("Кот " + begemot.getName() + " возраст:" + begemot.getAge());
         System.out.println("Собака "+reks.getName()+" возраст: "+reks.getAge());
 
+        vitalii.setCat(begemot);
+        vitalii.setDog(reks);
+        begemot.setHuman(vitalii);
+        reks.setHuman(vitalii);
 
-        System.out.println("У "+vitalii.getName() +
-                " есть кот " + begemot.getName() + " и собака " + reks.getName());
+        System.out.println("У "+begemot.getHuman().getName() +
+                " есть кот " + vitalii.getCat().getName() + " и собака " + vitalii.getDog().getName());
 
         Human natali = new Human("Наталья", 28, "женский");
 
@@ -26,13 +30,18 @@ public class StartProgram {
 
         Dog muhtar = new Dog("Мухтар", 3);
 
+        natali.setCat(nemo);
+        natali.setDog(muhtar);
+        nemo.setHuman(natali);
+        muhtar.setHuman(natali);
+
         System.out.println(natali.getName()+" "+natali.getAge()+" лет");
         System.out.println("Кот " + nemo.getName() + " возраст: " + nemo.getAge());
         System.out.println("Собака "+muhtar.getName()+" возраст: "+muhtar.getAge());
 
 
-        System.out.println("У "+natali.getName() +
-                " есть кот " + nemo.getName() + " и собака " + muhtar.getName());
+        System.out.println("У "+nemo.getHuman().getName() +
+                " есть кот " + natali.getCat().getName() + " и собака " + natali.getDog().getName());
 
         Cat catNotName1 = new Cat();
        // System.out.println("В клинику попал уличный кот "+catNotName1.getName());
