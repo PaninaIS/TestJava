@@ -21,7 +21,7 @@ public class StartProgram {
         begemot.setHuman(vitalii);
         reks.setHuman(vitalii);
 
-        System.out.println("У "+begemot.getHuman().getName() +
+        System.out.println("У "+vitalii.getName() +
                 " есть кот " + vitalii.getCat().getName() + " и собака " + vitalii.getDog().getName());
 
         Human natali = new Human("Наталья", 28, "женский");
@@ -40,7 +40,7 @@ public class StartProgram {
         System.out.println("Собака "+muhtar.getName()+" возраст: "+muhtar.getAge());
 
 
-        System.out.println("У "+nemo.getHuman().getName() +
+        System.out.println("У "+natali.getName() +
                 " есть кот " + natali.getCat().getName() + " и собака " + natali.getDog().getName());
 
         Cat catNotName1 = new Cat();
