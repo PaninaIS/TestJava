@@ -33,4 +33,26 @@ public class Cat extends Animals implements AnimalMakingSounds {
         System.out.println("Кот мяукает");
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Cat other = (Cat) obj;
+        if (getName() != other.getName())
+            return false;
+        if (getAge() != other.getAge())
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() == null ? 0 : getName().hashCode();
+        result = result + getAge();
+        return result;
+    }
    }
